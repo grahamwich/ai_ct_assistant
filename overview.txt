@@ -1,0 +1,24 @@
+ML techniques generally broken down into several steps:
+
+    - Data gathering, more data = more accuracy
+        - psychology examples?? volunteer?
+
+    - Data processing:
+        - Take necessary information and turn into data points
+        - Generally, datapoints have some input and output or possibly, some setup and conclusion
+        - NLP, spaCy?
+   
+    - Choose ML model, set parameters
+        - NN, KNN?
+
+    - Train on training data
+
+    - Input test data, analyze output
+        - new information with a preset desired outcome
+
+    - Tweak parameters, retrain
+
+    - Deployment
+        - reformat output to be more user friendly
+
+

@@ -27,7 +27,6 @@ def build_problems(directory_str, data_list):
 
 # data now is a large list of points:
 # (situation, solution)
-# =========================================================== #
 
 
 # 2.
@@ -37,7 +36,6 @@ def build_problems(directory_str, data_list):
 def extract_features(text):
     doc = nlp(text)
     return doc.vector
-# =========================================================== #
 
 
 # 3.
@@ -57,7 +55,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 group1 = numpy array of (NLP processed situation)
 group2 = numpy array of (NLP processed solution)
 split
-# =========================================================== #
 
 
 # 4.
@@ -73,7 +70,6 @@ model.add(layers.Dense(1, activation="sigmoid"))
 model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
 # Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
-# =========================================================== #
 
 
 # 5.
@@ -81,4 +77,3 @@ model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y
 # evaluate using the test set (seperated and saved in step 3)
 _, accuracy = model.evaluate(X_test, y_test)
 print(f"Accuracy: {accuracy * 100:.2f}%")
-# =========================================================== #
